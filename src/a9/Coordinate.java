@@ -1,6 +1,8 @@
 package a9;
 
 public class Coordinate {
+	
+	//coordinates are an alternate way to find pixels. They are useful because they can be returned by methods
 
 	private int x;
 	private int y;
