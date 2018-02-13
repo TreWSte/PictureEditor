@@ -6,6 +6,8 @@ public class ColorPixel implements Pixel {
 	private double green;
 	private double blue;
 	
+	//check for components being out of range
+	//else, set the values
 	public ColorPixel(double r, double g, double b) {
 		if (r < 0.0 || r > 1.0 || g < 0.0 || g > 1.0 || b < 0.0 || b > 1.0) {
 			throw new IllegalArgumentException("One or more color components out of range");
@@ -31,7 +33,7 @@ public class ColorPixel implements Pixel {
 		return blue;
 	}
 
-	@Override
+	//formula given to me by my teacher
 	public double getIntensity() {
 		return (0.2126 * getRed() + 0.7152 * getGreen() + 0.0722 * getBlue());
 	}
